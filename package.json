@@ -1,0 +1,11 @@
+{
+  "name": "statix",
+  "description": "Static site generator",
+  "version": "0.0.1",
+  "author": "Yang Piao",
+  "dependencies": {
+    "marked": "~0.2.9"
+  },
+  "devDependencies": {},
+  "scripts": {}
+}

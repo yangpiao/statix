@@ -1,0 +1,3 @@
+# Statix
+
+Static site generator.
