@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "author": "Yang Piao",
   "dependencies": {
-    "marked": "~0.2.9"
+    "async": "~0.2.9",
+    "marked": "~0.2.9",
+    "js-yaml": "~2.1.0"
   },
   "devDependencies": {},
   "scripts": {}
