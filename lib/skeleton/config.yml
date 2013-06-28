@@ -6,4 +6,11 @@ subtitle: Static Website Generator
 keywords:
 description:
 
+# Source
+src_directories:
+  templates: templates
+  contents: contents
+  helpers: helpers
+  output: output
 
+template: default
