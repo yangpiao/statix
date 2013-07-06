@@ -5,12 +5,35 @@ title: Statix
 subtitle: Static Website Generator
 keywords:
 description:
+author: admin
+# author:
+#   name: admin
+#   email: admin@example.com
+#   gravatar: admin@example.com
+#   ...
+rootUrl: http://example.com
 
-# Source
-src_directories:
-  templates: templates
-  contents: contents
-  helpers: helpers
-  output: output
 
-template: default
+
+# Template
+template:
+  name: default
+  engine: swig
+  fileExt: [ swig, html ]
+  directory: templates
+
+# Content
+content:
+  format: markdown
+  directory: contents
+  resources: public
+  blog:
+    directory: posts
+    permalink: "{year}/{month}-{date}-{title}"
+    pagination: 10 # 0 - disabled
+    defaultCategory: Uncategorized
+
+# Output
+output: output
+
+helpers: helpers
