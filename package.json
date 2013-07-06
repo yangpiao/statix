@@ -6,7 +6,8 @@
   "dependencies": {
     "async": "~0.2.9",
     "marked": "~0.2.9",
-    "js-yaml": "~2.1.0"
+    "js-yaml": "~2.1.0",
+    "swig": "~0.14.0"
   },
   "devDependencies": {},
   "scripts": {}
