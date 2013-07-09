@@ -17,16 +17,16 @@ rootUrl: http://example.com
 
 # Template
 template:
+  directory: templates
   name: default
   engine: swig
   fileExt: [ swig, html ]
-  directory: templates
 
 # Content
 content:
-  format: markdown
   directory: contents
-  resources: public
+  format: markdown
+  assetsDir: public
   blog:
     directory: posts
     permalink: "{year}/{month}-{date}-{title}"
