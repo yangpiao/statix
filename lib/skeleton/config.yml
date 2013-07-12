@@ -11,7 +11,7 @@ author: admin
 #   email: admin@example.com
 #   gravatar: admin@example.com
 #   ...
-rootUrl: http://example.com
+urlRoot: http://example.com
 
 # Template
 template:
@@ -29,10 +29,13 @@ content:
     output: blog
     permalink: "{year}/{month}-{date}-{title}"
     pagination: 10 # 0 - disabled
-    defaultCategory: Uncategorized
-    postTemplate: blog/post
-    categoryTemplate: blog/category
-    pageTemplates: [ blog/index, blog/archive ]
+    # defaultCategory: Uncategorized
+    # postTemplate: blog/post
+    templates:
+      post: blog/post
+      index: blog/index
+      archive: blog/archive
+      tag: blog/tag
 
 # Output
 output: output
