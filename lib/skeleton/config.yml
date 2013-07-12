@@ -29,8 +29,10 @@ content:
     output: blog
     permalink: "{year}/{month}-{date}-{title}"
     pagination: 10 # 0 - disabled
-    defaultTemplate: blog/post
     defaultCategory: Uncategorized
+    postTemplate: blog/post
+    categoryTemplate: blog/category
+    pageTemplates: [ blog/index, blog/archive ]
 
 # Output
 output: output
