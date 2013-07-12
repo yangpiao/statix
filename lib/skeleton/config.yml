@@ -13,24 +13,23 @@ author: admin
 #   ...
 rootUrl: http://example.com
 
-
-
 # Template
 template:
-  directory: templates
   name: default
+  directory: templates
   engine: swig
   fileExt: [ swig, html ]
 
 # Content
 content:
-  directory: contents
   format: markdown
-  assetsDir: public
+  directory: contents
   blog:
     directory: posts
+    output: blog
     permalink: "{year}/{month}-{date}-{title}"
     pagination: 10 # 0 - disabled
+    defaultTemplate: blog/post
     defaultCategory: Uncategorized
 
 # Output
