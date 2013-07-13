@@ -11,7 +11,7 @@ author: admin
 #   email: admin@example.com
 #   gravatar: admin@example.com
 #   ...
-urlRoot: http://example.com
+urlRoot: /
 
 # Template
 template:
@@ -28,9 +28,7 @@ content:
     directory: posts
     output: blog
     permalink: "{year}/{month}-{date}-{title}"
-    pagination: 10 # 0 - disabled
-    # defaultCategory: Uncategorized
-    # postTemplate: blog/post
+    pagination: 0 # 0 - disabled
     templates:
       post: blog/post
       index: blog/index
