@@ -1,5 +1,5 @@
 {% extends 'layout.swig' %}
 {% block content %}
-<h1>{{howto}}</h1>
-<p>{{intro}}</p>
+<h1>{{title}}</h1>
+<p>{{content}}</p>
 {% endblock %}
