@@ -1,10 +1,10 @@
-{% extends 'blog/blogLayout.swig' %}
+{% extends 'blog/layout-blog.swig' %}
 
 {% block articles %}
 {% for post in posts %}
 <article class="entry">
   <header>
-    <h1 class="entry-title">{{post.title}}</h1>
+    <h1 class="entry-title"><a href="{{post.permalink}}">{{post.title}}</a></h1>
     <p class="meta">
       <span class="author">By <span class="author-name">{{post.author}}</span></span> | <span class="time">{{post.time|date('F jS, Y')}}</span>
     </p>

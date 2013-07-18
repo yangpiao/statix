@@ -1,4 +1,4 @@
-{% extends 'blog/blogLayout.swig' %}
+{% extends 'blog/layout-blog.swig' %}
 
 {% block articles %}
 <article class="entry">
@@ -14,8 +14,12 @@
       Tags: (function still in development)
     </p>
     <p class="meta">
+      {% if prev %}
       <a class="prev-post" href="{{prev.permalink}}" title="Previous Post: {{prev.title}}">&laquo; {{prev.title}}</a>
+      {% endif %}
+      {% if next %}
       <a class="next-post" href="{{next.permalink}}" title="Next Post: {{next.title}}">&raquo; {{next.title}}</a>
+      {% endif %}
     </p>
   </footer>
 </article>

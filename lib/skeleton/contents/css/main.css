@@ -24,9 +24,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-body {
-  line-height: 1;
-}
 ol, ul {
   list-style: none;
 }
@@ -45,20 +42,23 @@ table {
 
 /* global */
 body {
-  font: 14px/1.5 "Open Sans", "Helvetica Neue", Helvetica, "STXihei",
-    "STHeiti", "Microsoft YaHei", "STSong", Arial, sans-serif;
+  font: 18px/1.5 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #2C3E50;
+}
+strong {
   font-weight: 400;
 }
 ::selection {
   color: #FFF;
-  background-color: #ef4423;
+  background-color: #7F8C8D;
 }
 a {
-  color: #888;
+  color: #E74C3C;
   text-decoration: none;
 }
 a:hover {
-  color: #ef4423;
+  color: #C0392B;
   text-decoration: none;
 }
 .clearfix {
@@ -71,126 +71,226 @@ a:hover {
   height: 0;
   clear: both;
 }
-
-#bloghead, #blogmain, #blogfoot {
-  width: 90%;
-  max-width: 950px;
-  min-width: 640px;
+/* 40, 12, 40 */
+.container {
+  width: 920px;
   margin: 0 auto;
 }
 
-/* header */
-#bloghead {
-  /* width: 950px; */
-  margin-top: 20px;
+/* styles */
+.pagetop {
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  background-color: #222;
+  font-size: 16px;
+  border-bottom: 1px solid #666;
 }
-#bloghead .site-desc {
+.pagetop a {
+  color: #BBB;
+}
+.pagetop a:hover {
+  color: #FFF;
+}
+.pagetop .sitename {
   float: left;
-  width: 28%;
-  font-size: 14px;
+  width: 360px;
+  font-size: 22px;
 }
-#bloghead h1 {
-  font-weight: 300;
-  font-size: 50px;
-}
-#bloghead .main-nav {
+.pagetop .navbar {
   float: right;
-  width: 68%;
-  /* margin-top: 30px; */
+  width: 520px;
   text-align: right;
 }
-#bloghead .main-nav li {
+.pagetop .navbar li {
   display: inline-block;
-  margin-left: 10px;
-}
-#bloghead .main-nav li.curr a {
-  border-bottom: 3px solid #999;
-}
-#bloghead .main-nav li a:hover {
-  border-bottom: 3px solid #DDD;
+  padding: 0 10px;
+  text-align: center;
 }
 
-/* content */
-#blogmain {
-  margin-top: 10px;
+.pagehead {
+  color: #FFF;
+  background-color: #C0392B;
+  height: 240px;
+  overflow: hidden;
 }
-#blogmain .content {
+.pagehead .name {
+  font-size: 60px;
+  font-weight: 400;
+  height: 120px;
+  line-height: 120px;
+  margin-top: 20px;
 }
-#blogmain .articles {
-  width: 68%;
+.pagehead .description {
+  height: 60px;
+  line-height: 60px;
+  font-size: 30px;
+}
+
+.pagebody {
+  padding: 40px 0;
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.15);
+}
+.pagebody .container {
+  min-height: 500px;
+}
+.pagebody h1 {
+  font-size: 32px;
+}
+.profile .profile-img {
+  width: 200px;
+  height: 200px;
+  float: left;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.profile .profile-img img {
+  width: 200px;
+}
+.profile .profile-txt {
+  width: 680px;
+  height: 200px;
   float: right;
-  border-top: 1px solid #CCC;
+}
+.profile .name {
+  margin: 10px 0 20px;
+}
+.profile .short-bio {
+  font-size: 24px;
+  color: #95A5A6;
+  line-height: 2;
+}
+.more {
+  margin-top: 60px;
+}
+.more > li {
+  float: left;
+  width: 280px;
+  margin-right: 40px;
+}
+.more > li:last-child {
+  margin-right: 0;
+}
+.more .title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #34495E;
+  border-bottom: 3px solid #ECF0F1;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+.more .content {
+  color: #7F8C8D;
+}
+.contact {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  color: #7F8C8D;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.pagefoot {
+  background-color: #EFF0F2;
+  color: #34495E;
+  color: #9aa4af;
+  height: 80px;
+  line-height: 80px;
+  text-align: right;
+}
+
+/* blog */
+.pagebody h1.blogtitle {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.blogmain .articles {
+  width: 560px;
+  float: right;
   padding-top: 20px;
 }
-#blogmain .sidebar {
-  width: 28%;
+.blogmain .sidebar {
+  width: 280px;
   float: left;
-  border-top: 1px solid #CCC;
   padding-top: 30px;
+  border-top: 3px solid #C0392B;
 }
-#blogmain .pagination {
+.blogmain .pagination {
   position: relative;
   padding: 0 0 20px;
 }
-#blogmain .pagination .older {
+.blogmain .pagination .older {
   position: absolute;
   left: 0;
 }
-#blogmain .pagination .newer {
+.blogmain .pagination .newer {
   position: absolute;
   right: 0;
 }
-#blogmain p {
+.blogmain p {
   margin-bottom: 18px;
 }
-#blogmain em {
+.blogmain em {
   font-style: italic;
 }
-#blogmain strong {
+.blogmain strong {
   font-weight: 400;
 }
-#blogmain .entry-content a {
-  color: #ba3925;
+.blogmain .entry-content a {
+  color: #E74C3C;
   text-decoration: none;
 }
-#blogmain .entry-content a:hover {
-  color: #ef4423;
+.blogmain .entry-content a:hover {
+  color: #C0392B;
   text-decoration: none;
 }
-#blogmain .gist {
+.blogmain .gist {
   font-size: 14px;
 }
-#blogmain pre, #blogmain code {
+.blogmain pre, .blogmain code {
   font-family: Menlo, Monaco, Consolas, monospace;
   font-weight: 400;
 }
-#blogmain pre {
+.blogmain pre {
   font-size: 14px;
   margin-bottom: 18px;
   padding: 15px;
   border: 1px solid #DDD;
 }
-#blogmain figure table {
+.blogmain figure table {
   width: 100%;
 }
-#blogmain blockquote {
+.blogmain blockquote {
   border-left: 3px solid #DDD;
   padding: 8px;
   margin-bottom: 18px;
 }
-#blogmain blockquote p {
+.blogmain blockquote p {
   margin-bottom: 10px;
 }
-#blogmain blockquote p:last-child {
+.blogmain blockquote p:last-child {
   margin-bottom: 0;
 }
-#blogmain footer a {
+.blogmain footer a {
   border-bottom: 1px dotted #CCC;
 }
 .articles article {
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 30px;
+}
+.articles .entry-title {
+}
+.articles .entry-title a {
+  color: #2C3E50;
+}
+.articles .entry-title a:hover {
+  color: #E74C3C;
 }
 .articles h1 {
   font-size: 28px;
@@ -219,7 +319,7 @@ a:hover {
 .articles ul, .articles ol {
   margin-bottom: 18px;
 }
-#blogmain li p {
+.blogmain li p {
   margin-bottom: 8px;
 }
 .articles li {
@@ -247,104 +347,42 @@ a:hover {
 }
 
 /* sidebar */
-.sidebar h1 {
-  font-family: 'Open Sans Condensed', "Helvetica Neue", Arial, sans-serif;
-  font-weight: 300;
-  font-size: 28px;
-  margin-bottom: 4px;
-}
 .sidebar section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+.sidebar h1 {
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ECF0F1;
+}
+.sidebar .search h1 {
+  border-bottom: none;
 }
 .sidebar .searchform {
   margin: 0;
   vertical-align: middle;
   background-color: #FFF;
-  border: 1px solid #BBB;
-  height: 24px;
+  height: 36px;
+  padding: 0 10px;
   overflow: hidden;
-  padding-left: 26px;
-  background: url(/images/search.png) no-repeat 4px center;
+  color: #7F8C8D;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
 }
-.sidebar .search {
+.sidebar .searchinput {
   vertical-align: middle;
   border: none;
   width: 100%;
   outline: none;
-  font-size: 12px;
+  padding: 5px 0;
   color: #CCC;
-  height: 20px;
-  padding: 2px 0;
+  font-size: 16px;
+  height: 26px;
+  line-height: 26px;
+  font-weight: 300;
 }
 .sidebar li {
   margin-bottom: 8px;
-}
-
-/* footer */
-#blogfoot {
-  margin-top: 20px;
-  border-top: 1px solid #CCC;
-  padding: 20px 0 30px;
-  font-size: 16px;
-  text-align: right;
-  color: #777;
-  font-weight: 300;
-}
-#blogfoot a {
-  border-bottom: 1px dotted #DDD;
-}
-#blogfoot .divider {
-  display: inline-block;
-  padding: 0 15px;
-  color: #AAA;
-}
-
-@media (max-width: 640px) {
-  #bloghead, #blogmain, #blogfoot {
-    width: 100%;
-    min-width: 320px;
-    margin: 0 auto;
-  }
-  #bloghead h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-  #bloghead .site-desc {
-    // display: none;
-    text-align: center;
-    width: 90%;
-    font-size: 12px;
-    float: none;
-    margin: 0 auto;
-  }
-  #bloghead .main-nav {
-    float: none;
-    width: 90%;
-    text-align: center;
-    font-size: 12px;
-    margin: 0 auto;
-  }
-  #blogmain .sidebar {
-    float: none;
-    width: 90%;
-    margin: 0 auto;
-  }
-  #blogmain .articles {
-    float: none;
-    width: 90%;
-    margin: 0 auto;
-  }
-  .articles h1 {
-    font-size: 22px;
-  }
-  .articles article {
-    font-size: 16px;
-  }
-  #blogfoot {
-    font-size: 11px;
-    text-align: center;
-  }
-  #blogfoot .divider {
-    padding: 0 3px;
-  }
 }

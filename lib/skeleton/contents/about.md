@@ -1,4 +1,6 @@
 title: About
 >>>
 
-Statix is a static website generator.
+This is the About page.
+
+Nothing useful here.
