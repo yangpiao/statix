@@ -89,7 +89,7 @@ a:hover {
 .pagetop a {
   color: #BBB;
 }
-.pagetop a:hover {
+.pagetop a:hover, .pagetop .current a {
   color: #FFF;
 }
 .pagetop .sitename {
@@ -204,21 +204,22 @@ a:hover {
 }
 
 /* blog */
-.pagebody h1.blogtitle {
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 5px;
-}
 .blogmain .articles {
   width: 560px;
   float: right;
-  padding-top: 20px;
 }
 .blogmain .sidebar {
   width: 280px;
   float: left;
   padding-top: 30px;
   border-top: 3px solid #C0392B;
+}
+.pagebody h1.blogtitle {
+  float: left;
+  width: 280px;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 .blogmain .pagination {
   position: relative;
@@ -275,9 +276,6 @@ a:hover {
 }
 .blogmain blockquote p:last-child {
   margin-bottom: 0;
-}
-.blogmain footer a {
-  border-bottom: 1px dotted #CCC;
 }
 .articles article {
   font-size: 18px;

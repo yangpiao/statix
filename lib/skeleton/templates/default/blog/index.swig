@@ -1,7 +1,7 @@
 {% extends 'blog/layout-blog.swig' %}
 
-{% block articles %}
-{% for post in posts %}
+{% block articles -%}
+{% for post in posts -%}
 <article class="entry">
   <header>
     <h1 class="entry-title"><a href="{{post.permalink}}">{{post.title}}</a></h1>
@@ -11,16 +11,16 @@
   </header>
   <div class="entry-content">{{post.content|raw}}</div>
 </article>
-{% endfor %}
+{%- endfor %}
 
 <div class="pagination">
-{% if pages.prevLink %}
-<a class="prev-page" href="{{pages.prevLink}}">Newer Posts</a>
+{% if pages.prevLink -%}
+<a class="newer" href="{{pages.prevLink}}">Newer Posts &raquo;</a>
 {% else %}
-{% endif %}
-{% if pages.nextLink %}
-<a class="next-page" href="{{pages.nextLink}}">Older Posts</a>
+{%- endif %}
+{% if pages.nextLink -%}
+<a class="older" href="{{pages.nextLink}}">&laquo; Older Posts</a>
 {% else %}
-{% endif %}
+{%- endif %}
 </div>
-{% endblock %}
+{%- endblock %}

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>{{config.sitename}}{% if title %}-{{title}}{% endif %}</title>
+  <title>{{config.sitename}}{% if title %} - {{title}}{% endif %}</title>
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
   <meta name="author" content="{{config.author}}">
   {% if config.description %}
@@ -27,22 +27,36 @@
       <h1 class="sitename"><a href="{{config.urlRoot}}">{{config.sitename}}</a></h1>
       <nav class="navbar">
         <ul>
-          <li><a href="{{config.urlRoot}}">Home</a></li>
-          <li><a href="{{config.urlRoot}}/about.html">About</a></li>
-          <li><a href="{{config.urlRoot}}/blog/">Blog</a></li>
+          {# really ugly way #}
+          {% if bodyClass == 'home' -%}
+            {% set itemClass1 = 'current' %}
+          {% else if bodyClass == 'about' %}
+            {% set itemClass2 = 'current' %}
+          {% else %}
+            {% set itemClass3 = 'current' %}
+          {%- endif %}
+          <li class="{{itemClass1}}">
+            <a href="{{config.urlRoot}}">Home</a>
+          </li>
+          <li class="{{itemClass2}}">
+            <a href="{{config.urlRoot}}/about.html">About</a>
+          </li>
+          <li class="{{itemClass3}}">
+            <a href="{{config.urlRoot}}/blog/">Blog</a>
+          </li>
         </ul>
       </nav>
     </div>
   </div>
 
-  {% block pagehead %}
+  {% block pagehead -%}
   <header class="pagehead">
     <div class="container">
       <h1 class="name">{{config.sitename}}</h1>
       <p class="description">{{config.sitedesc}}</p>
     </div>
   </header>
-  {% endblock %}
+  {%- endblock %}
 
   <div class="pagebody">
     <div class="container">
@@ -56,7 +70,7 @@
     </div>
   </footer>
 
-{% if config.googleAnalytics %}
+{% if config.googleAnalytics -%}
 <!-- Google Analytics -->
 <script type="text/javascript">
 var _gaq = _gaq || [];
@@ -69,6 +83,6 @@ _gaq.push(['_trackPageview']);
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 </script>
-{% endif %}
+{%- endif %}
 </body>
 </html>

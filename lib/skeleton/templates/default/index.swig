@@ -1,6 +1,5 @@
 {% extends 'layout.swig' %}
-{% block content %}
-
+{% block content -%}
 <div class="profile clearfix">
   <div class="profile-img">
     <img src="{{config.urlRoot}}/images/jsmith.png">
@@ -16,11 +15,11 @@
     <h2 class="title">Recent Blogs</h2>
     <div class="content">
       <ul class="recent-posts">
-      {% for post in blog.allPosts %}
-        {% if loop.index <= 5 %}
+      {% for post in blog.allPosts -%}
+        {% if loop.index <= 5 -%}
         <li class="post"><a href="{{post.permalink}}">{{post.title}}</a></li>
-        {% endif %}
-      {% endfor %}
+        {%- endif %}
+      {%- endfor %}
       </ul>
     </div>
   </li>
@@ -42,4 +41,4 @@
   Contact me: {{email}} <i>OR</i> @{{twitter}}.
 </div>
 
-{% endblock %}
+{%- endblock %}
