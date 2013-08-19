@@ -10,11 +10,16 @@
   </header>
   <div class="entry-content">{{content|raw}}</div>
   <footer>
-    <!--
-    <p class="meta">
-      Tags: (function still in development)
+    <p class="meta tags">
+      Tags:
+      {% for tag in tags -%}
+      <a href="{{config.urlRoot}}/blog/tags/{{tag}}.html"
+        title="View posts with {{tag}}">{{tag}}</a>{% if not loop.last %},{% endif %}
+      {% else %}
+      <a href="{{config.urlRoot}}/blog/tags/no-tag.html"
+        title="View posts with no tag">no tag</a>.
+      {%- endfor %}
     </p>
-    -->
     <p class="meta pagination">
       {% if prev -%}
       <a class="older" href="{{prev.permalink}}" title="Previous Post: {{prev.title}}">&laquo; {{prev.title}}</a>
