@@ -8,6 +8,7 @@ Still in development, usable, but don't expect too much.
 
 **TODO**:
 
+- RSS Support.
 - Plugin (templates, parsers, etc.)
-- Custon helper script.
+- Custom helper script.
 - Docs.

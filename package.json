@@ -7,10 +7,10 @@
   "repository": "git@github.com:yangpiao/statix.git",
   "dependencies": {
     "async": "~0.2.9",
-    "marked": "~0.2.9",
+    "marked": "~0.2.10",
     "js-yaml": "~2.1.0",
-    "swig": "~0.14.0"
+    "swig": "~0.14.0",
+    "highlight.js": "~7.5.0"
   },
-  "devDependencies": {},
   "scripts": {}
 }
