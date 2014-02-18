@@ -6,7 +6,7 @@
   "bin": "./bin/statix",
   "repository": {
     "type": "git",
-    "url": "git://github.com:yangpiao/statix.git"
+    "url": "git://github.com/yangpiao/statix.git"
   },
   "dependencies": {
     "async": "~0.2.9",
