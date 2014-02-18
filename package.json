@@ -4,7 +4,10 @@
   "version": "0.0.1",
   "author": "Yang Piao",
   "bin": "./bin/statix",
-  "repository": "git@github.com:yangpiao/statix.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:yangpiao/statix.git"
+  },
   "dependencies": {
     "async": "~0.2.9",
     "marked": "~0.2.10",
