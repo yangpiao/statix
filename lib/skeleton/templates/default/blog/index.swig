@@ -1,4 +1,4 @@
-{% extends 'blog/layout-blog.swig' %}
+{% extends '../_layout/layout-blog.swig' %}
 
 {% block articles -%}
 {% for post in posts -%}
@@ -9,7 +9,7 @@
       <span class="author">By <span class="author-name">{{post.author}}</span></span> | <span class="time">{{post.time|date('F jS, Y')}}</span>
     </p>
   </header>
-  <div class="entry-content">{{post.content|raw}}</div>
+  <div class="entry-content">{{post.content|safe}}</div>
 </article>
 {%- endfor %}
 

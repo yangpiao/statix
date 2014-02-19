@@ -1,4 +1,5 @@
 {% extends 'layout.swig' %}
+{% block bodytag -%}<body class="blog">{%- endblock %}
 {% block pagehead -%}{# clears pagehead #}{%- endblock %}
 
 {% block content -%}

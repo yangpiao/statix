@@ -1,4 +1,4 @@
-{% extends 'layout.swig' %}
+{% extends '_layout/layout.swig' %}
 {% block content -%}
 <div class="profile clearfix">
   <div class="profile-img">

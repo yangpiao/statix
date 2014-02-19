@@ -1,4 +1,4 @@
-{% extends 'blog/layout-blog.swig' %}
+{% extends '../_layout/layout-blog.swig' %}
 
 {% block articles -%}
 <article class="entry">
@@ -8,17 +8,19 @@
       <span class="author">By <span class="author-name">{{author}}</span></span> | <span class="time">{{time|date('F jS, Y')}}</span>
     </p>
   </header>
-  <div class="entry-content">{{content|raw}}</div>
+  <div class="entry-content">{{content|safe}}</div>
   <footer>
     <p class="meta tags">
       Tags:
+      {% if tags.length -%}
       {% for tag in tags -%}
-      <a href="{{config.urlRoot}}/blog/tags/{{tag}}.html"
-        title="View posts with {{tag}}">{{tag}}</a>{% if not loop.last %},{% endif %}
+        <a href="{{config.urlRoot}}/blog/tags/{{tag}}.html"
+          title="View posts with {{tag}}">{{tag}}</a>{% if not loop.last %},{% endif %}
+      {%- endfor %}
       {% else %}
       <a href="{{config.urlRoot}}/blog/tags/no-tag.html"
         title="View posts with no tag">no tag</a>.
-      {%- endfor %}
+      {%- endif %}
     </p>
     <p class="meta pagination">
       {% if prev -%}

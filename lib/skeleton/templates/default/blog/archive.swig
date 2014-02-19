@@ -1,4 +1,4 @@
-{% extends 'blog/layout-blog.swig' %}
+{% extends '../_layout/layout-blog.swig' %}
 
 {% block article %}
 This is the archive page.

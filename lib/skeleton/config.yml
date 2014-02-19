@@ -11,7 +11,7 @@ author: John Smith
 #   email: admin@example.com
 #   gravatar: admin@example.com
 #   ...
-urlRoot: http://example.com
+urlRoot: ''
 
 # Template
 template:
@@ -39,3 +39,18 @@ content:
 output: output
 
 helpers: helpers
+
+# navbar
+navbar:
+  -
+    name: Home
+    className: home
+    url: ''
+  -
+    name: About Me
+    className: about
+    url: about.html
+  -
+    name: Blog
+    className: blog
+    url: blog
