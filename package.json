@@ -3,11 +3,12 @@
   "description": "Static site generator",
   "version": "0.0.1",
   "author": "Yang Piao",
-  "bin": "./bin/statix",
+  "homepage": "https://github.com/yangpiao/statix",
   "repository": {
     "type": "git",
     "url": "git://github.com/yangpiao/statix.git"
   },
+  "bin": "./bin/statix",
   "dependencies": {
     "async": "~0.2.9",
     "marked": "~0.3.1",
