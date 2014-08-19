@@ -1,7 +1,7 @@
 {
   "name": "statix",
   "description": "Static site generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Yang Piao",
   "homepage": "https://github.com/yangpiao/statix",
   "repository": {
