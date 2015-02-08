@@ -8,6 +8,5 @@ Still in development, usable, but don't expect too much.
 
 **TODO**:
 
-- Generating RSS
 - Plugin (templates, parsers, etc.)
 - Helper script?
